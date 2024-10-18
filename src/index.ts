@@ -5,7 +5,7 @@ export default class DotaApp implements App {
     return {
       id: "dota-app",
       name: "Dota 2 App",
-      description: "Dota 2 App",
+      description: "Show your Dota 2 rank & tier",
       version: 1,
       author: "Pramod",
       authorXUrl: "https://twitter.com/@pramodk73",
