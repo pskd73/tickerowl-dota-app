@@ -37,6 +37,10 @@ export default class DotaApp implements App {
           return {
             slides: [
               {
+                type: "TEXT",
+                text: data.profile.personaname,
+              },
+              {
                 type: "KEY_VALUE",
                 key: "Rank",
                 value: data.leaderboard_rank.toString(),
