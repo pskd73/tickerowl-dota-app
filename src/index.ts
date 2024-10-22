@@ -1,4 +1,4 @@
-import { App, AppInfo, AppSlide } from "tickerowl-app-base";
+import { App, AppInfo, AppSlide, SlideMaker } from "tickerowl-app-base";
 
 export default class DotaApp implements App {
   getInfo(): AppInfo {
@@ -36,20 +36,15 @@ export default class DotaApp implements App {
 
           return {
             slides: [
-              {
-                type: "TEXT",
-                text: data.profile.personaname,
-              },
-              {
-                type: "KEY_VALUE",
+              SlideMaker.text({ text: data.profile.personaname }),
+              SlideMaker.keyValue({
                 key: "Rank",
                 value: data.leaderboard_rank.toString(),
-              },
-              {
-                type: "KEY_VALUE",
+              }),
+              SlideMaker.keyValue({
                 key: "Tier",
                 value: data.rank_tier.toString(),
-              },
+              }),
             ],
           };
         },
